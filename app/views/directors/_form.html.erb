@@ -1,0 +1,13 @@
+<%= form_with model: @director, local: true do |form| %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :birth_date %>
+    <%= form.date_field :birth_date %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

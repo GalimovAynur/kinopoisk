@@ -1,0 +1,18 @@
+<% @movies.each do |movie| %>
+<div class="row">
+  <div class="col">
+    <h2><%= link_to movie.title, movie_path(movie) %></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <%= image_tag movie.poster.url(:medium) %>
+  </div>
+  <div class="col-9">
+    <p><%= movie.director.name %></p>
+    <p><%= movie.release_date %></p>
+    <p><%= movie.description %></p>
+  </div>
+</div>
+<hr>
+<% end %>
